@@ -18,78 +18,43 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/includes/css/main.css" media="screen" />
+    <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    
+    
 	<?php wp_head(); ?>
 </head>
 
+    
+    
 <body <?php body_class(); ?>>
 	<?php do_action( 'before' ); ?>
-
-<header id="masthead" class="site-header" role="banner">
-<?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
-		<div class="row">
-			<div class="site-header-inner col-sm-12">
-
-				<?php $header_image = get_header_image();
-				if ( ! empty( $header_image ) ) { ?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-					</a>
-				<?php } // end if ( ! empty( $header_image ) ) ?>
-
-
-				<div class="site-branding">
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<p class="lead"><?php bloginfo( 'description' ); ?></p>
-				</div>
-
-			</div>
-		</div>
-	</div><!-- .container -->
-</header><!-- #masthead -->
-
-<nav class="site-navigation">
-<?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
-		<div class="row">
-			<div class="site-navigation-inner col-sm-12">
-				<div class="navbar navbar-default">
-					<div class="navbar-header">
-						<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only"><?php _e('Toggle navigation','_tk') ?> </span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-	
-						<!-- Your site title as branding in the menu -->
-						<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-					</div>
-
-					<!-- The WordPress Menu goes here -->
-					<?php wp_nav_menu(
-						array(
-							'theme_location' 	=> 'primary',
-							'depth'             => 2,
-							'container'         => 'div',
-							'container_class'   => 'collapse navbar-collapse',
-							'menu_class' 		=> 'nav navbar-nav',
-							'fallback_cb' 		=> 'wp_bootstrap_navwalker::fallback',
-							'menu_id'			=> 'main-menu',
-							'walker' 			=> new wp_bootstrap_navwalker()
-						)
-					); ?>
-
-				</div><!-- .navbar -->
-			</div>
-		</div>
-	</div><!-- .container -->
-</nav><!-- .site-navigation -->
-
-<div class="main-content">
-<?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
-		<div class="row">
-			<div id="content" class="main-content-inner col-sm-12 col-md-8">
-
+    
+<?php show_admin_bar( $bool ); ?> <!--Removes Admin Bar-->
+    
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="slider">
+  <div class="container-fluid">
+    <div class="row">
+        <div class="navbar-header">
+            <div id="blackshape"></div>
+            <img src="<?php bloginfo('template_url'); ?>/includes/images/Logo.png" id="headerlogo">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul id="navslider">
+                <a href="#"><li>Subscribe</li></a>
+                <a href="#"><li>Mission</li></a>
+                <a href="#"><li>Gallery</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>Splash</li></a>
+            </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+ </nav>

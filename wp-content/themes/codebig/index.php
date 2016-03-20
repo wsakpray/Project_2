@@ -13,28 +13,31 @@
 
 get_header(); ?>
 
-	<?php if ( have_posts() ) : ?>
+<div class="row-eq-height">
+    <div class="col-sm-6" id="splashtext">
+        <div>
+            <h1>LEARN, CRAFT, SHARE</h1>
+            <h2>A whole new way to code and create.</h2>
+        </div>
+    </div>
+    <div class="col-sm-6" id="splashphoto">
+        <img src="<?php bloginfo('template_url'); ?>/includes/images/Splash_Photo.jpg">
+        <button class="popbtn">Watch the Video &#9658;</button>
+    </div>
+</div>
 
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
+<div class="row">
+    <div class="col-sm-12" id="splashfooter">
+    </div>
+</div>
 
-			<?php
-				/* Include the Post-Format-specific template for the content.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'content', get_post_format() );
-			?>
+<div class="row" id="aboutsection">
+    <div class="col-sm-4" id="about1">
+    </div>
+    <div class="col-sm-4" id="about2">
+    </div>
+    <div class="col-sm-4" id="about3">
+    </div>
+</div>
 
-		<?php endwhile; ?>
-
-		<?php _tk_content_nav( 'nav-below' ); ?>
-
-	<?php else : ?>
-
-		<?php get_template_part( 'no-results', 'index' ); ?>
-
-	<?php endif; ?>
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
