@@ -1,14 +1,50 @@
+a.anchor {
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+}
+
 #slider {
     background: #FFB92C;
     border: 0;
     box-shadow: 10px 0 5px #888888;
 }
 
+h1 {
+    letter-spacing: 1px;
+    font-family: 'Arvo',sans-serif;
+    font-weight: 400;
+    font-size: 7vw;
+}
+h3 {
+    font-family: 'Muli', sans-serif;
+    font-size: 3.8vw;
+    text-align: center;
+}
+@media (min-width: 767px) { 
+    .row-eq-height {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    } 
+    h1 {
+        font-size: 3.5vw;
+    }
+    h3 {
+        font-size: 1.4vw;
+    }
+    .popbtn {
+        font-size: 16px;
+    }
+}
+
 .popbtn {
     border: none;
     font-family: 'Muli', sans-serif;
     font-weight: 400;
-    font-size: 3.8vw;
+    font-size: 14px;
     color: #fff;
     border-radius: 5px;
 	box-shadow: 0px 2px 0px #000000;
@@ -37,6 +73,7 @@
     transform: translate(0px,2px);
 }
 
+/*-----------------------------------------------------------------*/
 
 #headerlogo {
     position: absolute;
@@ -101,12 +138,9 @@
         font-size: 16px;
         margin-left: 10px;
     }
-    .popbtn {
-        font-size: 16px;
-    }
 }
-/*-----------------------------------------------------------------------------------------------*/
 
+/*-----------------------------------------------------------------*/
 
 #splashphoto img{
     width: 100%;
@@ -118,7 +152,6 @@
     bottom: 8%;
     background: #FF9A20;
     left: 30%;
-    font-max
 }
 
 #splashtext {
@@ -131,30 +164,19 @@
     text-align: center;
 }
 #splashtext h1 {
-    font-size: 7.6vw;
-    font-family: 'Muli',sans-serif;
-    font-weight: 400;
-    transform: translate(0, 20px);
+    transform: translate(0, 10px);
 }
 #splashtext h2 {
     color:#FFB92C;
     font-size: 4.2vw;
     font-family: 'Muli',sans-serif;
     font-weight: 400;
+    left: 8%;
 }
 @media (min-width: 767px) { 
-    .row-eq-height {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-    }  
-    #splashtext h1 {
-        font-size: 3.5vw;
-        transform: translate(0, 10px);
-    }
     #splashtext h2 {
         font-size: 2vw;
+        left: 5%;
     }
     #splashphoto img{
         padding-left: 0;
@@ -179,20 +201,369 @@
     content: '';
 }
 
-/*-----------------------------------------------------------------------------------------------*/
-#aboutsection div {
-    height: 200px;
+/*-----------------------------------------------------------------*/
 
-}
 #about1 {
-    background: green;
+    background: #39B54A;
 }
 #about2 {
-    background: purple;
+    background: #EC7DFF;
 }
 #about3 {
-    background: blue;
+    background: #4DA2FF;
+}
+
+#aboutsection h1, #aboutsection h3 {
+    position: absolute;
+    color: white;
+}
+#aboutsection h1 {
+    top: 10px;
+}
+#aboutsection h3 {
+    padding: 0 20px 0 20px;
+    bottom: 10px;
+}
+
+#aboutsection h1 {
+    left: 10%;
+}
+#aboutsection div {
+    padding: 0;
+}
+.about_img {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+/*-----------------------------------------------------------------*/
+
+#submitted {
+    background: #4DA2FF;
+    background: -webkit-linear-gradient(#1f8aff,#add4ff); /*Safari 5.1-6*/
+    background: -o-linear-gradient(#1f8aff,#add4ff);  /*Opera 11.1-12*/
+    background: -moz-linear-gradient(#1f8aff,#add4ff);  /*Fx 3.6-15*/
+    background: linear-gradient(#1f8aff,#add4ff);  /*Standard*/
+}
+#submitted h1 {
+    margin-top: 5%;
+    color: white;
+    text-align: center;
+    padding-left: 0;
+}
+
+#submittedcols {
+    padding: 0 15% 0 15%;
+}
+#submittedcols div {
+    margin: 10% 0 10% 0;
+}
+.submitted_img_box {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+}
+.submitted_img {
+    width: 100%;
+}
+
+.submitted_img_box h3, .submitted_img_box p {
+    font-family: 'Muli', sans-serif;
+    font-weight: 400;
+    position: absolute;
+    z-index: 1;
+    bottom: 2%;
+    color: black;
+}
+.submitted_img_box h3 {
+    font-size: 6vw;
+    left: 5%;
+}
+.submitted_img_box p{
+    font-size: 4vw;
+    right: 5%;
+    text-align: right;
+}
+
+.submitted_img_box:after {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    bottom: 0;
+    content: '';
+    
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0),rgba(255, 255, 255, 0)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(rgba(255, 255, 255, 0),rgb(255, 255, 255)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(rgba(255, 255, 255, 0),rgb(255, 255, 255)); /*Fx 3.6-15*/
+    background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255)); /*Standard*/
+    z-index: 0;
+}
+
+#submittedbtn {
+    position: relative;
+    height: 50px;
+}
+#submittedbtn:before {
+    position: absolute;
+    height: 3px;
+    top: 8px;
+    width: 100%;
+    background: #cbe4ff;
+    content: ''
+}
+#submittedbtn .popbtn {
+    position: absolute;
+    right: 11%;
+    background: #4DA2FF;
+    bottom: 30px;
+}
+#submittedbtn .popbtn:hover {
+	box-shadow: 0px 6px 0px #2775cb;
+}
+#submittedbtn .popbtn:active {
+	box-shadow: 0px 0px 0px #2775cb;
+}
+
+@media (min-width: 767px) { 
+    #submitted h1 {
+        text-align: left;
+        padding-left: 6%;
+    }
+    #submittedcols {
+        padding: 0 5% 0 5%;
+    }
+    #submittedcols div {
+        margin: 2% 0 2% 0;
+    }
+    .submitted_img_box h3 {
+        font-size: 1.6vw;
+        bottom: -1%;
+    }
+    .submitted_img_box p{
+        font-size: 1.2vw;
+        bottom: -1%;
+    }
+    #submittedbtn .popbtn {
+        right: 6%;
+        bottom: 20px;
+    }
+    #submittedbtn:before {
+        top: 18px;
+    }
+}
+
+/*-----------------------------------------------------------------*/
+
+#goal {
+    background: #FF9A20;
+    background: -webkit-linear-gradient(#FFB92C,#FF9A20); /*Safari 5.1-6*/
+    background: -o-linear-gradient(#FFB92C,#FF9A20);  /*Opera 11.1-12*/
+    background: -moz-linear-gradient(#FFB92C,#FF9A20);  /*Fx 3.6-15*/
+    background: linear-gradient(#FFB92C,#FF9A20);  /*Standard*/
+    padding: 20px 0 20px 0;
+}
+#goaltext {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#goaltext div {
+    position: relative;
+    text-align: center;
+}
+
+#goalphoto img{
+    width: 100%;
+    padding: 10px 0 10px 0;
+}
+
+#goalfooter {
+    height: 40px;
+    background: #FF9A20;
+    background: -webkit-linear-gradient(#FF9A20,#7F47DD); /*Safari 5.1-6*/
+    background: -o-linear-gradient(#FF9A20,#7F47DD);  /*Opera 11.1-12*/
+    background: -moz-linear-gradient(#FF9A20,#7F47DD);  /*Fx 3.6-15*/
+    background: linear-gradient(#FF9A20,#7F47DD);  /*Standard*/
+}
+
+/*-----------------------------------------------------------------*/
+
+#reviews {
+    background: #7F47DD;
+    padding: 30px 30px 0 30px;
+}
+
+#reviewscol {
+    position: relative;
+    color: white;
+    font-size: 14px;
+    min-height: 220px;
+}
+
+#reviewscol div {
+    padding: 5px 5px 40px 5px;
+}
+
+#reviewscol div p{
+    font-family: 'Muli', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    
+    padding: 10px 10px 20px 10px;
+    background: #5b26b2;
+    border-radius: 5px;
+    height: inherit;
+}
+
+#reviewscol div p:before {
+    position: absolute;
+    border-style: solid;
+    border-width: 0 20px 15px 0;
+    border-color: transparent #5b26b2 transparent transparent;
+    left: 15px;
+    bottom: 75px;
+    content: ''
+}
+
+.reviewstag {
+    position: absolute;
+}
+#reviewscol img {
+    width: 40px;
+    transform: translate(30px, -5px);
+}
+#reviewscol h3 {
+    position: absolute;
+    text-align: left;
+    top: -15px;
+    left: 85px;
+    width: 200px;
+}
+
+#reviewsbtn {
+    position: relative;
+    height: 50px;
+}
+#reviewsbtn .popbtn {
+    position: absolute;
+    right: 30px;
+    background: #b68cfd;
+    bottom: 30px;
+}
+#reviewsbtn:before {
+    position: absolute;
+    height: 3px;
+    top: 8px;
+    width: 100%;
+    background: #956ade;
+    content: ''
+}
+#reviewsbtn .popbtn:hover {
+	box-shadow: 0px 6px 0px #52269d;
+}
+#reviewsbtn .popbtn:active {
+	box-shadow: 0px 0px 0px #52269d;
+}
+@media (min-width: 767px) { 
+    #reviews {
+        padding-top: 20px;
+    }
+    #reviewsbtn  .popbtn {
+        bottom: 20px;
+    }
+    #reviewscol div p{
+        height: 150px;
+    }
+    #reviewsbtn:before {
+        top: 15px;
+    }
+}
+
+/*-----------------------------------------------------------------*/
+
+#subscribe {
+    height: 450px;
+    background-image: url("../images/Splash_Photo_Background.jpg");
+    background-size: cover;
+    background-position: center; 
+    opacity: 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#subscribe form {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    background: #FFB92C;
+    padding: 5px 0 5px 0;
+}
+#subscribe h1 {
+    position: absolute;
+    width: 100%;
+    bottom: 90%;
+}
+#subscribe button {
+    background: black;
+}
+#subscribe input {
+    font-family: 'Muli', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    min-width: 150px;
+    width: 60%;
+}
+@media (min-width: 767px) { 
+    #subscribe input {
+        width: 30%;
+    }
+}
+/*-----------------------------------------------------------------*/
+
+#CBfooter {
+    height: 100px;
+    background: #FF9A20;
+    background: -webkit-linear-gradient(#FFB92C,#FF9A20); /*Safari 5.1-6*/
+    background: -o-linear-gradient(#FFB92C,#FF9A20);  /*Opera 11.1-12*/
+    background: -moz-linear-gradient(#FFB92C,#FF9A20);  /*Fx 3.6-15*/
+    background: linear-gradient(#FFB92C,#FF9A20);  /*Standard*/
+}
+
+#icons {
+    position: absolute;
+    transform: translate(50%,0);
+    right: 50%;
+    top: 15px;
+    width: 155px;
+}
+#icons img {
+    width: 35px;
+    height: 100%;
+    padding: 2;
+}
+footer h1 {
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    bottom: 0px;
+    width: 100%;
 }
 
 
-
+@media (min-width: 767px) { 
+    #icons {
+        transform: translate(0,0);
+        right: 5%;
+        top: 20px;
+    }
+    footer h1 {
+        right: 5%;
+        width: auto;
+    }
+}

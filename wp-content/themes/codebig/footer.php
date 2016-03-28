@@ -7,26 +7,29 @@
  * @package _tk
  */
 ?>
-			</div><!-- close .*-inner (main-content or sidebar, depending if sidebar is used) -->
-		</div><!-- close .row -->
-	</div><!-- close .container -->
-</div><!-- close .main-content -->
+
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
-		<div class="row">
-			<div class="site-footer-inner col-sm-12">
+	<div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12"  id="CBfooter">
+                <div id="icons">
+                    <a href="#"><img src="<?php bloginfo('template_url'); ?>/includes/images/Icons_01.png"></a>
+                    <a href="#"><img src="<?php bloginfo('template_url'); ?>/includes/images/Icons_02.png"></a>
+                    <a href="#"><img src="<?php bloginfo('template_url'); ?>/includes/images/Icons_03.png"></a>
+                    <a href="#"><img src="<?php bloginfo('template_url'); ?>/includes/images/Icons_04.png"></a>
+                    
+                </div>
+                <h1>Privacy Policy © CodeBIG 2016</h1>
+            </div>
+        </div>
+        
+        
+        
 
-				<div class="site-info">
-					<?php do_action( '_tk_credits' ); ?>
-					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', '_tk' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', '_tk' ), 'WordPress' ); ?></a>
-					<span class="sep"> | </span>
-                    <a class="credits" href="http://themekraft.com/" target="_blank" title="Themes and Plugins developed by Themekraft" alt="Themes and Plugins developed by Themekraft"><?php _e('Themes and Plugins developed by Themekraft.','_tk') ?> </a>
-				</div><!-- close .site-info -->
+        
 
-			</div>
-		</div>
 	</div><!-- close .container -->
 </footer><!-- close #colophon -->
 
